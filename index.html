@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="google-site-verification" content="8yB52KwfIsQoY3kfVU7-6PoU8uNelr6aehkFdZ60avc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -245,6 +246,126 @@ textarea {
 
         }
 
+      .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.skill-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.skill-card h3 {
+    color: #2563eb;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.skill-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: #2563eb;
+}
+
+.skill-fill.html {
+    width: 90%;
+}
+
+.skill-fill.css {
+    width: 80%;
+}
+
+.skill-fill.javascript {
+    width: 65%;
+}
+
+.skill-fill.web {
+    width: 75%;
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+      .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    color: #2563eb;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.project-btn:hover {
+    background: #174bb5;
+}
+
+@media (max-width: 800px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
     </style>
 
 </head>
@@ -341,15 +462,43 @@ textarea {
   <!-- SKILLS -->
 
 <div class="box" id="skills">
-
     <h2>My Skills 💻</h2>
 
-    <p>HTML 🌐</p>
-    <p>CSS 🎨</p>
-    <p>JavaScript ⚡</p>
-    <p>Web Design 🖥️</p>
-    <p>Problem Solving 🧠</p>
+    <div class="skills-container">
 
+        <div class="skill-card">
+            <h3>🌐 HTML</h3>
+            <p>Website Structure</p>
+            <div class="skill-bar">
+                <div class="skill-fill html"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>🎨 CSS</h3>
+            <p>Website Design</p>
+            <div class="skill-bar">
+                <div class="skill-fill css"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>⚡ JavaScript</h3>
+            <p>Website Interaction</p>
+            <div class="skill-bar">
+                <div class="skill-fill javascript"></div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>🖥️ Web Design</h3>
+            <p>Creative Design</p>
+            <div class="skill-bar">
+                <div class="skill-fill web"></div>
+            </div>
+        </div>
+
+    </div>
 </div>
   
 
@@ -359,34 +508,31 @@ textarea {
 
     <h2>My Projects 🚀</h2>
 
-    <div class="project">
-        <h3>🌐 My First Website</h3>
-        <p>
-            A simple website created using HTML and CSS.
-        </p>
-        <button onclick="alert('My First Website')">
-            View Project
-        </button>
-    </div>
+    <p>Here are some of the projects I have created while learning web development.</p>
 
-    <div class="project">
-        <h3>🎓 College Website</h3>
-        <p>
-            A responsive college website project.
-        </p>
-        <button onclick="alert('College Website')">
-            View Project
-        </button>
-    </div>
+    <div class="projects-container">
 
-    <div class="project">
-        <h3>💡 Future Project</h3>
-        <p>
-            More exciting projects will be added here.
-        </p>
-        <button onclick="alert('Coming Soon! 🚀')">
-            Coming Soon
-        </button>
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>My First Website</h3>
+            <p>My first personal website created using HTML, CSS and JavaScript.</p>
+            <a href="#" class="project-btn">View Project →</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🎓</div>
+            <h3>College Website</h3>
+            <p>A responsive college website project with a clean and modern design.</p>
+            <a href="#" class="project-btn">View Project →</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">💡</div>
+            <h3>Future Project</h3>
+            <p>More exciting web development projects will be added here.</p>
+            <a href="#" class="project-btn">Coming Soon →</a>
+        </div>
+
     </div>
 
 </div>
